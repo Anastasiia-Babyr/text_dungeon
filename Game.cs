@@ -55,10 +55,13 @@ namespace текстовое_подземелье
         {
             do
             {
-                roomNumber = 0;
-                Console.Clear();
-                WriteLevelDescription();
-                Console.ReadLine();
+                if (_playerState == PlayerState.Next)
+                {
+                    roomNumber = 0;
+                    Console.Clear();
+                    WriteLevelDescription();
+                    Console.ReadLine();
+                }
                 while (roomNumber < 5)
                 {
                     if (_playerState == PlayerState.Next)
